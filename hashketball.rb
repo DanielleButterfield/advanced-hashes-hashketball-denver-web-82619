@@ -330,3 +330,44 @@ def most_points_scored
   reordered = reorder.sort_by { |size, name| size }.reverse
   p reordered[0][1]
 end
+
+def winning_team
+  name_index = []
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name
+        name_index.push(data)
+        team_data.each do |att, dat|
+          if att == :players
+            dat.each do |play_stat, stats|
+              stats.each do |stat_att, stat|
+                if stat_att == :points
+                  stat_arr.push(stat)
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  total_tally = {}
+  team1 = 0
+  team2 = 0
+  count = 0
+  while count <= 9 do
+    if count <= 4
+      team1 += stat_arr[count]
+      count += 1
+    elsif count >= 5
+      team2 += stat_arr[count]
+      count += 1
+    end
+  end
+  total_tally[team1] = name_index[0]
+  total_tally[team2] = name_index[1]
+  final_score = total_tally.sort_by { |size, name| size }.reverse
+  p final_score[0][1]
+end
