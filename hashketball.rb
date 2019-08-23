@@ -143,7 +143,7 @@ def num_points_scored(player)
     end
   end
   point_index = stat_arr.index(player) + 3
-  return stat_arr[point_index]
+  p stat_arr[point_index]
 end
 
 def shoe_size(player)
@@ -161,5 +161,5 @@ def shoe_size(player)
     end
   end
   point_index = stat_arr.index(player) + 2
-  return stat_arr[point_index]
+  p stat_arr[point_index]
 end
