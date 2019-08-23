@@ -175,3 +175,16 @@ def team_colors(team)
   point_index = color_arr.index(team) + 1
   p color_arr[point_index]
 end
+
+def team_names
+  name_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name
+        name_arr.push(data)
+      end
+    end
+  end
+  p name_arr
+end
