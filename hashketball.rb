@@ -161,7 +161,7 @@ def shoe_size(player)
         data.each do |play_stat, stats|
           stats.each do |stat_att, stat|
             if stat_att == :name
-              name_array.push(stat)
+              name_index.push(stat)
             elsif stat_att == :shoe
               stat_arr.push(stat)
             end
