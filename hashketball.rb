@@ -395,3 +395,34 @@ def player_with_longest_name
   longest = names_and_lengths.sort_by { |size, name| size }.reverse
   p longest[0][1]
 end
+
+def long_name_steals_a_ton?
+  longest = player_with_longest_name
+  name_index = []
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            if stat_att == :name
+              name_index.push(stat)
+            elsif stat_att == :steals
+              stat_arr.push(stat)
+            end
+          end
+        end
+      end
+    end
+  end
+  reorder = {}
+  count = 0
+  while stat_arr[count] do
+    reorder[stat_arr[count]] = name_index[count]
+    count += 1
+  end
+  thiefest = reorder.sort_by { |size, name| size }.reverse
+  thiefest[0][1] == longest
+end
+  
