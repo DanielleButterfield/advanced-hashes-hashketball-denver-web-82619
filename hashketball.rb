@@ -201,8 +201,7 @@ def team_names
       end
     end
   end
-  point_index = name_index.index(team)
-  p name_arr[point_index]
+  p name_arr
 end
 
 def player_numbers(team)
