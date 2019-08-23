@@ -62,7 +62,7 @@ def game_hash
       :team_name => "Charlotte Hornets",
       :colors => ["Turquoise", "Purple"],
       :players => [
-        :jeff_stats =>
+        :jeff_stats => {
           :number => 4,
           :shoe => 18,
           :points => 10,
@@ -72,7 +72,7 @@ def game_hash
           :blocks => 7,
           :slam_dunks => 2
         }
-        :bismack_stats =>
+        :bismack_stats => {
           :number => 0,
           :shoe => 16,
           :points => 12,
@@ -82,7 +82,7 @@ def game_hash
           :blocks => 15,
           :slam_dunks => 10
         }
-        :desagna_stats =>
+        :desagna_stats => {
           :number => 2,
           :shoe => 14,
           :points => 24,
@@ -92,7 +92,7 @@ def game_hash
           :blocks => 5,
           :slam_dunks => 5
         }
-        :ben_stats =>
+        :ben_stats => {
           :number => 8,
           :shoe => 15,
           :points => 33,
@@ -102,7 +102,7 @@ def game_hash
           :blocks => 1,
           :slam_dunks => 0
         }
-        :kemba_stats =>
+        :kemba_stats => {
           :number => 33,
           :shoe => 15,
           :points => 6,
