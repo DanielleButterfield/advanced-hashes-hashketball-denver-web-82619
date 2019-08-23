@@ -137,5 +137,3 @@ def num_points_scored(player)
   point_index = stat_arr.index(player) + 3
   p stat_arr[point_index]
 end
-
-good_practices
