@@ -121,14 +121,21 @@ def game_hash
 end
 
 def num_points_scored(player)
-  game_hash.each do |origin, team|
-    team.each do |team_dat, players|
-      players.each do |stat_name, stats|
-        if stats = player
-          puts stat_name[:points]
-          return stat_name[:points]
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            stat_arr.push(stat)
+          end
         end
       end
     end
   end
+  point_index = stat_arr.index(player) + 3
+  p stat_arr[point_index]
 end
+
+good_practices
