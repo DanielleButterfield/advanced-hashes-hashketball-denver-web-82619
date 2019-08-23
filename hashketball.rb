@@ -228,3 +228,26 @@ def player_numbers(team)
   end
   p stat_arr
 end
+
+def player_stats(player)
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            if stat_att == :name
+              if stat == player
+                stats.each do |stat_att, stat|
+                  stat_arr.push(stat)
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  p stat_arr[1..8]
+end
