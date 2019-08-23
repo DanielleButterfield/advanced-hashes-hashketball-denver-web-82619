@@ -264,7 +264,7 @@ def big_shoes_rebound
           stats.each do |stat_att, stat|
             if stat_att == :name
               name_index.push(stat)
-            elsif stat_att == :points
+            elsif stat_att == :shoe
               stat_arr.push(stat)
             end
           end
