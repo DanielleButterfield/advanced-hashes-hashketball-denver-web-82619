@@ -254,6 +254,7 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
+  final = ""
   name_index = []
   stat_arr = []
   gameHash = game_hash
@@ -288,7 +289,7 @@ def big_shoe_rebounds
               if stat == reordered[0][1]
                 stats.each do |stat_att, stat|
                   if stat_att == :rebounds
-                    p stat
+                    final = stat
                   end
                 end
               end
