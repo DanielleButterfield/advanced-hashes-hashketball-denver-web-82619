@@ -136,14 +136,15 @@ def num_points_scored(player)
       if attribute == :players
         data.each do |play_stat, stats|
           stats.each do |stat_att, stat|
-            stat_arr.push(stat)
+            if stat_att == :points
+              stat_arr.push(stat)
+            end
           end
         end
       end
     end
   end
-  point_index = stat_arr.index(player) + 3
-  p stat_arr[point_index]
+  p stat_arr
 end
 
 def shoe_size(player)
@@ -154,26 +155,29 @@ def shoe_size(player)
       if attribute == :players
         data.each do |play_stat, stats|
           stats.each do |stat_att, stat|
-            stat_arr.push(stat)
+            if stat_att == :shoe
+              stat_arr.push(stat)
+            end
           end
         end
       end
     end
   end
   point_index = stat_arr.index(player) + 2
-  p stat_arr[point_index]
+  p stat_arr
 end
 
 def team_colors(team)
   color_arr = []
   gameHash = game_hash
   gameHash.each do |location, team_data|
-    team_data.each do |att, dat|
-      color_arr.push(dat)
+    team_data.each do |attribut, data|
+      if attribut == :colors
+        color_arr.push(data)
+      end
     end
   end
-  point_index = color_arr.index(team) + 1
-  p color_arr[point_index]
+  p color_arr
 end
 
 def team_names
@@ -187,4 +191,29 @@ def team_names
     end
   end
   p name_arr
+end
+
+def player_numbers(team)
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name
+        if data == team
+          team_data.each do |att, dat|
+            if att == :players
+              dat.each do |play_stat, stats|
+                stats.each do |stat_att, stat|
+                  if stat_att == :number
+                    stat_arr.push(stat)
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  p stat_arr
 end
