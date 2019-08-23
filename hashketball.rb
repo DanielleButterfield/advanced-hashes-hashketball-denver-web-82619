@@ -118,6 +118,8 @@ def game_hash
   return gameHash
 end
 
-def num_points_scored
-
+def num_points_scored(player)
+  play = player.split[0]
+  puts play
+  play_stats = game_hash[]
 end
