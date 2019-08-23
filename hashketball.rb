@@ -253,7 +253,7 @@ def player_stats(player)
   p stat_arr
 end
 
-def big_shoes_rebound
+def big_shoes_rebounds
   name_index = []
   stat_arr = []
   gameHash = game_hash
