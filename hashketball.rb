@@ -168,9 +168,13 @@ def team_colors(team)
   color_arr = []
   gameHash = game_hash
   gameHash.each do |location, team_data|
-    if location[:team_name] == team
-      color_arr.push(location[:colors])
+    if team_data == :team_name
+      if team_data == team
+        team_data.each do |att, dat|
+          color_arr.push(dat)
+        end
+      end
     end
   end
-  p color_arr
+  p color_arr[1]
 end
