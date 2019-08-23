@@ -230,7 +230,7 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-  stat_arr = []
+  stat_arr = {}
   gameHash = game_hash
   gameHash.each do |location, team_data|
     team_data.each do |attribute, data|
@@ -239,7 +239,9 @@ def player_stats(player)
           stats.each do |stat_att, stat|
             if stat_att == :name
               if stat == player
-                stat_arr.push(stats)
+                stats.each do |stat_att, stat|
+                  stat_arr[stat_att] = stat
+                end
               end
             end
           end
@@ -247,5 +249,6 @@ def player_stats(player)
       end
     end
   end
+  stat_arr.delete(:name)
   p stat_arr
 end
