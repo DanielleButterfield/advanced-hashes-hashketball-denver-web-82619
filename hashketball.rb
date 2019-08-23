@@ -371,3 +371,27 @@ def winning_team
   final_score = total_tally.sort_by { |size, name| size }.reverse
   p final_score[0][1]
 end
+
+def player_with_longest_name
+  name_index = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            if stat_att == :name
+              name_index.push(stat)
+            end
+          end
+        end
+      end
+    end
+  end
+  names_and_lengths = {}
+  name_index.each do |name|
+    names_and_lengths[name.length] = name
+  end
+  longest = names_and_lengths.sort_by { |size, name| size }.reverse
+  p longest[0][1]
+end
