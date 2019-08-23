@@ -44,7 +44,7 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
         :jason_stats => {
           :number => ,
@@ -54,7 +54,7 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
       ]
     },
@@ -62,7 +62,7 @@ def game_hash
       :team_name => ,
       :colors => [],
       :players => [
-        :_stats => 
+        :_stats =>
           :number => ,
           :shoe => ,
           :points => ,
@@ -70,9 +70,9 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
-        :_stats => 
+        :_stats =>
           :number => ,
           :shoe => ,
           :points => ,
@@ -80,9 +80,9 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
-        :_stats => 
+        :_stats =>
           :number => ,
           :shoe => ,
           :points => ,
@@ -90,9 +90,9 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
-        :_stats => 
+        :_stats =>
           :number => ,
           :shoe => ,
           :points => ,
@@ -100,9 +100,9 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
-        :_stats => 
+        :_stats =>
           :number => ,
           :shoe => ,
           :points => ,
@@ -110,7 +110,7 @@ def game_hash
           :assists => ,
           :steals => ,
           :blocks => ,
-          :slam_dunks => 
+          :slam_dunks =>
         }
       ]
     }
