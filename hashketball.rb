@@ -145,3 +145,21 @@ def num_points_scored(player)
   point_index = stat_arr.index(player) + 3
   p stat_arr[point_index]
 end
+
+def shoe_size(player)
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            stat_arr.push(stat)
+          end
+        end
+      end
+    end
+  end
+  point_index = stat_arr.index(player) + 2
+  p stat_arr[point_index]
+end
