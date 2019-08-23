@@ -239,9 +239,7 @@ def player_stats(player)
           stats.each do |stat_att, stat|
             if stat_att == :name
               if stat == player
-                stats.each do |stat_att, stat|
-                  stat_arr.push(stat)
-                end
+                stat_arr.push(stats)
               end
             end
           end
@@ -249,5 +247,5 @@ def player_stats(player)
       end
     end
   end
-  p stat_arr[1..8]
+  p stat_arr
 end
