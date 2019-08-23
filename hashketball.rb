@@ -187,7 +187,8 @@ def team_colors(team)
       end
     end
   end
-  p color_arr
+  point_index = name_index.index(team)
+  p color_arr[point_index]
 end
 
 def team_names
