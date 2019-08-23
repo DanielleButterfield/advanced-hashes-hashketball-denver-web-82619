@@ -124,14 +124,10 @@ def num_points_scored(player)
   stat_arr = []
   gameHash = game_hash
   gameHash.each do |location, team_data|
-    puts "It crashed here."
     team_data.each do |attribute, data|
-      puts "It crashed here."
       if attribute == :players
         data.each do |play_stat, stats|
-          puts "It crashed here."
           stats.each do |stat_att, stat|
-            puts "It crashed here."
             stat_arr.push(stat)
           end
         end
@@ -139,5 +135,5 @@ def num_points_scored(player)
     end
   end
   point_index = stat_arr.index(player) + 3
-  p stat_arr[point_index]
+  return stat_arr[point_index]
 end
