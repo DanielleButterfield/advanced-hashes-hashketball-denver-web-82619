@@ -163,3 +163,12 @@ def shoe_size(player)
   point_index = stat_arr.index(player) + 2
   p stat_arr[point_index]
 end
+
+def team_colors(team)
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    if location[:team_name] == team
+      return location[:colors]
+    end
+  end
+end
