@@ -172,5 +172,6 @@ def team_colors(team)
       color_arr.push(dat)
     end
   end
-  p color_arr[1]
+  point_index = color_arr.index(team) + 1
+  p color_arr[point_index]
 end
