@@ -15,7 +15,7 @@ def game_hash
           :steals => 3,
           :blocks => 1,
           :slam_dunks => 1
-        }
+        },
         :reggie_stats => {
           :number => 30,
           :shoe => 14,
@@ -25,7 +25,7 @@ def game_hash
           :steals => 12,
           :blocks => 12,
           :slam_dunks => 7
-        }
+        },
         :brook_stats => {
           :number => 11,
           :shoe => 17,
@@ -35,7 +35,7 @@ def game_hash
           :steals => 3,
           :blocks => 1,
           :slam_dunks => 15
-        }
+        },
         :mason_stats => {
           :number => 1,
           :shoe => 19,
@@ -45,7 +45,7 @@ def game_hash
           :steals => 3,
           :blocks => 8,
           :slam_dunks => 5
-        }
+        },
         :jason_stats => {
           :number => 31,
           :shoe => 15,
@@ -55,7 +55,7 @@ def game_hash
           :steals => 4,
           :blocks => 11,
           :slam_dunks => 1
-        }
+        },
       ]
     },
     :away => {
@@ -71,7 +71,7 @@ def game_hash
           :steals => 2,
           :blocks => 7,
           :slam_dunks => 2
-        }
+        },
         :bismack_stats => {
           :number => 0,
           :shoe => 16,
@@ -81,7 +81,7 @@ def game_hash
           :steals => 22,
           :blocks => 15,
           :slam_dunks => 10
-        }
+        },
         :desagna_stats => {
           :number => 2,
           :shoe => 14,
@@ -91,7 +91,7 @@ def game_hash
           :steals => 4,
           :blocks => 5,
           :slam_dunks => 5
-        }
+        },
         :ben_stats => {
           :number => 8,
           :shoe => 15,
@@ -101,7 +101,7 @@ def game_hash
           :steals => 1,
           :blocks => 1,
           :slam_dunks => 0
-        }
+        },
         :kemba_stats => {
           :number => 33,
           :shoe => 15,
@@ -111,7 +111,7 @@ def game_hash
           :steals => 7,
           :blocks => 5,
           :slam_dunks => 12
-        }
+        },
       ]
     }
   }
