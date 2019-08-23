@@ -1,12 +1,11 @@
 # Write your code here!
-require "pry"
 
 def game_hash
   gameHash = {
     :home => {
       :team_name => "Brooklyn Nets",
       :colors => ["Black", "White"],
-      :players => [
+      :players => {
         :alan_stats => {
           :number => 0,
           :shoe => 16,
@@ -57,12 +56,12 @@ def game_hash
           :blocks => 11,
           :slam_dunks => 1
         },
-      ]
+      }
     },
     :away => {
       :team_name => "Charlotte Hornets",
       :colors => ["Turquoise", "Purple"],
-      :players => [
+      :players => {
         :jeff_stats => {
           :name => "Jeff Adrien",
           :number => 4,
@@ -114,7 +113,7 @@ def game_hash
           :blocks => 5,
           :slam_dunks => 12
         },
-      ]
+      }
     }
   }
   return gameHash
@@ -135,5 +134,5 @@ def num_points_scored(player)
     end
   end
   point_index = stat_arr.index(player) + 3
-  return stat_arr[point_index]
+  p stat_arr[point_index]
 end
