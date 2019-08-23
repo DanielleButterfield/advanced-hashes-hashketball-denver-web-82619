@@ -179,7 +179,7 @@ def team_colors(team)
   color_arr = []
   gameHash = game_hash
   gameHash.each do |location, team_data|
-    team_data.each do |attribut, data|
+    team_data.each do |attribute, data|
       if attribut == :team_names
         name_index.push(attribut)
       elsif attribute == :colors
