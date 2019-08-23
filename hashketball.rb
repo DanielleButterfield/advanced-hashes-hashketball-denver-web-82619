@@ -120,7 +120,14 @@ def game_hash
 end
 
 def num_points_scored(player)
-  play = player.split[0]
-  puts play
-  play_stats = game_hash[]
+  game_hash.each do |origin, team|
+    team.each do |team_dat, players|
+      players.each do |stat_name, stats|
+        if stats = player
+          puts stat_name[:points]
+          return stat_name[:points]
+        end
+      end
+    end
+  end
 end
