@@ -252,3 +252,50 @@ def player_stats(player)
   stat_arr.delete(:name)
   p stat_arr
 end
+
+def big_shoes_rebound
+  name_index = []
+  stat_arr = []
+  gameHash = game_hash
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            if stat_att == :name
+              name_index.push(stat)
+            elsif stat_att == :points
+              stat_arr.push(stat)
+            end
+          end
+        end
+      end
+    end
+  end
+  reorder = {}
+  count = 0
+  while stat_arr[count] do
+    reorder[stat_arr[count]] = name_index[count]
+    count += 1
+  end
+  reordered = reorder.sort_by { |size, name| size }.reverse
+  gameHash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |play_stat, stats|
+          stats.each do |stat_att, stat|
+            if stat_att == :name
+              if stat == reordered[0][1]
+                stats.each do |stat_att, stat|
+                  if stat_att == :rebounds
+                    p stat
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end
