@@ -170,7 +170,8 @@ def shoe_size(player)
       end
     end
   end
-  p stat_arr
+  point_index = name_index.index(player)
+  p stat_arr[point_index]
 end
 
 def team_colors(team)
