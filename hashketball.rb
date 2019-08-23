@@ -175,11 +175,14 @@ def shoe_size(player)
 end
 
 def team_colors(team)
+  name_index = []
   color_arr = []
   gameHash = game_hash
   gameHash.each do |location, team_data|
     team_data.each do |attribut, data|
-      if attribut == :colors
+      if attribut == :team_names
+        name_index.push(attribut)
+      elsif attribute == :colors
         color_arr.push(data)
       end
     end
@@ -197,7 +200,8 @@ def team_names
       end
     end
   end
-  p name_arr
+  point_index = name_index.index(team)
+  p name_arr[point_index]
 end
 
 def player_numbers(team)
