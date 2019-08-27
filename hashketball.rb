@@ -426,6 +426,7 @@ def long_name_steals_a_ton?
   thiefest[0][1] == longest
 end
 
+# More methods, less functions. NO GOD-METHODS
 
 # def all_players
 #   game_hash[:home][:players].concat(game_hash[:away][:players])
@@ -438,7 +439,7 @@ end
 # end
 
 # def num_points_scored player_name
-  # find_player(player_name)[:points]
+#   find_player(player_name)[:points]
 # end
 
 # def shoe_size player_name
@@ -450,7 +451,7 @@ end
 # end
 
 # def find_team
-#   #   all_teams.find do |color|
+#     all_teams.find do |color|
 #       team[:colors] == color
 #   end
 # end
