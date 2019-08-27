@@ -425,3 +425,43 @@ def long_name_steals_a_ton?
   thiefest = reorder.sort_by { |size, name| size }.reverse
   thiefest[0][1] == longest
 end
+
+
+# def all_players
+#   game_hash[:home][:players].concat(game_hash[:away][:players])
+# end
+
+# def find_player
+#   all_players.find do |player|
+#     player[:name] == player
+#   end
+# end
+
+# def num_points_scored player_name
+  # find_player(player_name)[:points]
+# end
+
+# def shoe_size player_name
+#   find_player(player_name)[:shoe]
+# end
+
+# def all_teams
+#   game_hash.values
+# end
+
+# def find_team
+#   #   all_teams.find do |color|
+#       team[:colors] == color
+#   end
+# end
+
+# def team_colors(team_name)
+#   find_team(team_name)[:colors]
+# end
+
+# def team_names
+#   all_teams.map do |team|
+#     team[:team_name]
+#   end
+# end
+
