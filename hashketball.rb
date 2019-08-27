@@ -425,4 +425,3 @@ def long_name_steals_a_ton?
   thiefest = reorder.sort_by { |size, name| size }.reverse
   thiefest[0][1] == longest
 end
-  
